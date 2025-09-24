@@ -1,19 +1,19 @@
 /* === Flexbox Layout for Project === */
 
-/* Make body a flex container with vertical stacking */
+/* Body layout */
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack header, main, footer */
   min-height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Make main a flex container with horizontal layout */
+/* Main layout (article + aside) */
 main {
   display: flex;
-  flex-direction: row;
-  flex: auto; /* allow it to grow and shrink */
+  flex-direction: row; /* Horizontal */
+  flex: auto;
 }
 
 /* Article takes 2/3 width */
@@ -31,7 +31,7 @@ aside {
   background-color: #f4f4f4;
 }
 
-/* Style header and footer */
+/* Header and footer */
 header,
 footer {
   background-color: #ddd;
