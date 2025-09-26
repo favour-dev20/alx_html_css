@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+/* ========== GENERAL ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,45 +12,47 @@ body {
   background-color: #f9f9f9;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ========== HEADER ========== */
 header {
-  background-color: #222; /* dark background to show white logo */
-  border-bottom: 1px solid #ddd;
+  background-color: #111;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #ddd;
 }
 
-header nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
 
-header nav .logo {
-  width: 140px;
-  height: auto;
-  display: block;
+.logo-wrapper {
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
 }
 
-header nav ul {
+.site-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
 
-header nav ul li a {
-  text-decoration: none;
+nav ul li a {
   color: #fff;
+  text-decoration: none;
   font-weight: 600;
 }
 
-/* =========================
-   HERO / BANNER
-========================= */
+/* ========== HERO ========== */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -86,9 +86,8 @@ header nav ul li a {
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .hero-content button:hover {
@@ -96,128 +95,113 @@ header nav ul li a {
 }
 
 .hero-image img {
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-/* =========================
-   INSTRUCTORS & TUTORIALS
-========================= */
-.instructors, .tutorials {
+/* ========== INSTRUCTORS ========== */
+.instructors {
   padding: 4rem 2rem;
+  text-align: center;
 }
 
-.instructor-cards, .tutorial-cards {
+.instructor-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
 
-.instructor-cards div, .tutorial-card {
-  background-color: #fff;
+.instructor-cards div {
+  background: #fff;
   padding: 1rem;
   border-radius: 10px;
   flex: 1 1 200px;
   text-align: center;
 }
 
-/* Tutorials */
-.tutorial-card .image-container {
+/* ========== VIDEO LIST ========== */
+.video-list {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.video-list h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1 1 240px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.video-thumb {
   position: relative;
 }
 
-.tutorial-card .image-container img {
+.video-thumb img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  display: block;
 }
 
-.tutorial-card .play-icon {
+.play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #fff;
   background: rgba(0,0,0,0.5);
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.6rem;
 }
 
-.tutorial-cards .author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+.video-card h3 {
+  margin: 1rem 0 0.3rem;
+  color: #222;
+}
+
+.video-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.video-card .rating {
   margin: 0.5rem 0;
 }
 
-.tutorial-cards .author img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.tutorial-cards .rating i {
+.video-card .rating i {
   color: #ff6f61;
+  margin: 0 3px;
 }
 
-.tutorial-card .duration {
+.video-card .duration {
   font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
-
-/* =========================
-   TESTIMONIAL / QUOTES (TASK 3)
-========================= */
-.testimonial {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background-color: #fff3f0;
-  border-radius: 10px;
-  margin: 2rem 0;
-}
-
-.testimonial-image img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.testimonial-content {
-  max-width: 600px;
-}
-
-.testimonial-content blockquote {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.testimonial-content h3 {
-  font-size: 1.25rem;
-  color: #222;
-  margin-bottom: 0.25rem;
-}
-
-.testimonial-content p {
   color: #777;
 }
 
-/* =========================
-   MEMBERSHIP (TASK 5)
-========================= */
+/* ========== MEMBERSHIP ========== */
 .membership {
   padding: 4rem 2rem;
+  background-color: #fff;
   text-align: center;
-  background: #fffae6;
 }
 
 .membership h2 {
@@ -228,67 +212,76 @@ header nav ul li a {
 
 .membership-cards {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
-.membership-cards div {
+.membership-cards .card {
   background: #fff;
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 2rem;
   flex: 1 1 200px;
-  max-width: 220px;
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.membership-cards img {
-  width: 60px;
-  height: 60px;
+.membership-cards .card img {
+  width: 80px;
+  height: auto;
   margin-bottom: 1rem;
 }
 
-.membership-cards h3 {
+.membership-cards .card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.membership-cards p {
+.membership-cards .card p {
+  color: #666;
   font-size: 0.95rem;
-  color: #555;
 }
 
 .membership button {
+  margin-top: 1rem;
   padding: 0.75rem 2rem;
   background: #ff6f61;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .membership button:hover {
   background: #e65b50;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
-  .hero {
-    flex-direction: column;
+  .logo-wrapper {
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 4px;
   }
 
-  .testimonial {
+  nav ul {
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
   }
-
+  
+  .instructor-cards,
+  .video-cards,
   .membership-cards {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-card {
+    max-width: 100%;
   }
 }
