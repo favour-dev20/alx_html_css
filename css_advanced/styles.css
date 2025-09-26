@@ -18,35 +18,41 @@ body {
    HEADER
 ========================= */
 header {
-  background-color: #ffffff;
+  background-color: #111; /* dark background so logo is visible */
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-header nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
 
-header nav .site-logo {
-  width: 120px;
-  height: auto;
+.logo-wrapper {
+  background-color: #fff;  /* white behind the logo */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
   display: block;
 }
 
-header nav ul {
+nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
 
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -88,7 +94,7 @@ header nav ul li a {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .hero-content button:hover {
@@ -101,9 +107,7 @@ header nav ul li a {
   border-radius: 10px;
 }
 
-/* =========================
-   INSTRUCTORS & TUTORIALS
-========================= */
+/* ========== INSTRUCTORS & TUTORIALS ========== */
 .instructors, .tutorials {
   padding: 4rem 2rem;
 }
@@ -122,19 +126,7 @@ header nav ul li a {
   text-align: center;
 }
 
-.tutorial-cards .author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
-}
-
-.tutorial-cards .rating i {
-  color: #ff6f61;
-}
-
-/* Thumbnails with play icon */
+/* tutorial thumbnail with play */
 .thumbnail {
   position: relative;
 }
@@ -144,21 +136,25 @@ header nav ul li a {
   border-radius: 10px;
 }
 
-.thumbnail .play-icon {
+.play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   color: #fff;
   border-radius: 50%;
-  padding: 0.75rem;
+  padding: 0.7rem;
   font-size: 1rem;
 }
 
-/* =========================
-   TESTIMONIAL / QUOTES
-========================= */
+/* rating stars */
+.rating i {
+  color: #ff6f61;
+  margin: 0 2px;
+}
+
+/* ========== TESTIMONIAL / QUOTES ========== */
 .testimonial {
   display: flex;
   align-items: center;
@@ -226,12 +222,12 @@ header nav ul li a {
   padding: 2rem;
   flex: 1 1 200px;
   max-width: 250px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
 
 .membership-cards .card img {
-  width: 60px;
+  width: 80px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -255,16 +251,14 @@ header nav ul li a {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .membership button:hover {
   background-color: #e65b50;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
@@ -275,14 +269,7 @@ header nav ul li a {
     max-width: 80%;
   }
 
-  .instructor-cards, .tutorial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .membership-cards {
+  .instructor-cards, .tutorial-cards, .membership-cards {
     flex-direction: column;
     align-items: center;
   }
