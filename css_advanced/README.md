@@ -1,30 +1,32 @@
 # CSS Advanced Project
 
-This project is part of the ALX HTML & CSS course.  
-The goal is to learn *CSS* and style a webpage from a *Figma design*.
+This project is part of the *ALX Software Engineering Program*.  
+It builds on the *HTML, advanced project* by adding CSS styling to match a Figma design.
 
 ---
 
-## Steps to Do the Project
-
-1. Create a folder called css_advanced inside your repo.
-2. Inside it, add two files:
-   - README.md (this file)
-   - index.html
-3. Copy the code for index.html (given below) into your file.
-4. Open the file in your browser or use *Live Server* in VS Code to check.
-5. Add and commit your changes:
-   - If using GitHub website: Click *Commit changes*.
-   - If using Git locally:
-     bash
-     git add .
-     git commit -m "Add css_advanced project"
-     git push
-     
-6. Submit the GitHub link to the checker.
+## 📌 Objectives
+- Reuse the HTML structure from the HTML, advanced project.
+- Apply CSS styles to match the provided Figma design.
+- Organize assets (images, icons, etc.) in the images/ folder.
+- Practice writing semantic HTML and clean, maintainable CSS.
 
 ---
 
-## Files in this project
-- README.md: explains the project
-- index.html: main webpage styled with CSS
+## 📂 Files
+- index.html → Main HTML structure.  
+- images/ → Folder containing project images.  
+- README.md → Documentation file.  
+
+---
+
+## 🎨 Design Resources
+- [Figma File](https://www.figma.com/) (duplicate to drafts to access details)  
+- Fonts: *Source Sans Pro, **Spin-Cycle-OT*  
+
+---
+
+## 🚀 How to Run
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/favour-dev20/alx_html_css.git
