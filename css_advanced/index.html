@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/4a2b055604.js" crossorigin="anonymous"></script>
   <title>Smile School</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
     <nav>
-      <img src="./images/logo.png" alt="Smile School Logo" class="logo">
+      <div class="logo-wrapper">
+        <img src="./images/logo.png" alt="Smile School Logo" class="site-logo" />
+      </div>
       <ul>
         <li><a href="#">COURSE</a></li>
         <li><a href="#">PRICING</a></li>
@@ -21,7 +23,7 @@
     </nav>
   </header>
 
-  <!-- HERO / BANNER SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Get schooled</h1>
@@ -31,41 +33,41 @@
       <button>REGISTER FOR FREE</button>
     </div>
     <div class="hero-image">
-      <img src="./images/1.png" alt="Banner image">
+      <img src="./images/1.png" alt="Banner image" />
     </div>
   </section>
 
-  <!-- INSTRUCTORS SECTION -->
+  <!-- INSTRUCTORS -->
   <section class="instructors">
     <h2>Learn from the pros</h2>
     <div class="instructor-cards">
       <div>
-        <img src="./images/2.png" alt="Phillip Massey">
+        <img src="./images/2.png" alt="Phillip Massey" />
         <h3>Phillip Massey</h3>
         <p>« Smile of the year » 2018 - 2019</p>
       </div>
       <div>
-        <img src="./images/3.png" alt="Nannie Lawrence">
+        <img src="./images/3.png" alt="Nannie Lawrence" />
         <h3>Nannie Lawrence</h3>
         <p>Best « little smile » 2017</p>
       </div>
       <div>
-        <img src="./images/4.png" alt="Bruce Walters">
+        <img src="./images/4.png" alt="Bruce Walters" />
         <h3>Bruce Walters</h3>
         <p>Best « Friend Smile » live performance 2019</p>
       </div>
       <div>
-        <img src="./images/5.png" alt="Henry Hughes">
+        <img src="./images/5.png" alt="Henry Hughes" />
         <h3>Henry Hughes</h3>
         <p>« 24h smiles » winner 2016 - 2019</p>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIAL / QUOTES SECTION (Task 3) -->
+  <!-- TESTIMONIAL / QUOTES -->
   <section class="testimonial">
     <div class="testimonial-image">
-      <img src="./images/Object.png" alt="Testimonial image">
+      <img src="./images/Object.png" alt="Testimonial image" />
     </div>
     <div class="testimonial-content">
       <blockquote>
@@ -77,21 +79,17 @@
     </div>
   </section>
 
-  <!-- TUTORIALS SECTION (Task 4) -->
-  <section class="tutorials">
-    <h2>Most popular tutorials</h2>
-    <div class="tutorial-cards">
-      <div class="tutorial-card">
-        <div class="image-container">
-          <img src="./images/6.png" alt="Diagonal Smile">
+  <!-- VIDEO LIST / MOST POPULAR (Task 4) -->
+  <section class="video-list">
+    <h2>Most popular videos</h2>
+    <div class="video-cards">
+      <div class="video-card">
+        <div class="video-thumb">
+          <img src="./images/6.png" alt="Diagonal Smile" />
           <i class="fa-solid fa-play play-icon"></i>
         </div>
         <h3>Diagonal Smile</h3>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-        <div class="author">
-          <img src="./images/2.png" alt="Phillip Massey">
-          <h4>Phillip Massey</h4>
-        </div>
+        <p>By Phillip Massey</p>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -102,17 +100,13 @@
         <p class="duration">8 min</p>
       </div>
 
-      <div class="tutorial-card">
-        <div class="image-container">
-          <img src="./images/7.png" alt="Happy Smile">
+      <div class="video-card">
+        <div class="video-thumb">
+          <img src="./images/7.png" alt="Happy Smile" />
           <i class="fa-solid fa-play play-icon"></i>
         </div>
         <h3>Happy Smile</h3>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-        <div class="author">
-          <img src="./images/2.png" alt="Phillip Massey">
-          <h4>Phillip Massey</h4>
-        </div>
+        <p>By Nannie Lawrence</p>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -123,17 +117,13 @@
         <p class="duration">8 min</p>
       </div>
 
-      <div class="tutorial-card">
-        <div class="image-container">
-          <img src="./images/8.png" alt="Natural Smile">
+      <div class="video-card">
+        <div class="video-thumb">
+          <img src="./images/8.png" alt="Natural Smile" />
           <i class="fa-solid fa-play play-icon"></i>
         </div>
         <h3>Natural Smile</h3>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-        <div class="author">
-          <img src="./images/2.png" alt="Phillip Massey">
-          <h4>Phillip Massey</h4>
-        </div>
+        <p>By Bruce Walters</p>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -144,17 +134,13 @@
         <p class="duration">8 min</p>
       </div>
 
-      <div class="tutorial-card">
-        <div class="image-container">
-          <img src="./images/9.png" alt="Sad Smile">
+      <div class="video-card">
+        <div class="video-thumb">
+          <img src="./images/9.png" alt="Sad Smile" />
           <i class="fa-solid fa-play play-icon"></i>
         </div>
         <h3>Sad Smile</h3>
-        <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-        <div class="author">
-          <img src="./images/2.png" alt="Phillip Massey">
-          <h4>Phillip Massey</h4>
-        </div>
+        <p>By Henry Hughes</p>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -167,29 +153,29 @@
     </div>
   </section>
 
-  <!-- MEMBERSHIP SECTION (Task 5) -->
+  <!-- MEMBERSHIP (Task 5) -->
   <section class="membership">
     <h2>Free membership</h2>
     <div class="membership-cards">
-      <div>
-        <img src="./images/member1.png" alt="Membership Icon">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="card">
+        <img src="./images/logo.png" alt="Membership icon" />
+        <h3>Basic Plan</h3>
+        <p>Access core tutorials & community.</p>
       </div>
-      <div>
-        <img src="./images/member2.png" alt="Membership Icon">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="card">
+        <img src="./images/logo.png" alt="Membership icon" />
+        <h3>Pro Plan</h3>
+        <p>Get advanced tutorials and perks.</p>
       </div>
-      <div>
-        <img src="./images/member3.png" alt="Membership Icon">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="card">
+        <img src="./images/logo.png" alt="Membership icon" />
+        <h3>Team Plan</h3>
+        <p>Collaborate and learn together.</p>
       </div>
-      <div>
-        <img src="./images/member4.png" alt="Membership Icon">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="card">
+        <img src="./images/logo.png" alt="Membership icon" />
+        <h3>Lifetime Plan</h3>
+        <p>One-time price for full access.</p>
       </div>
     </div>
     <button>REGISTER FOR FREE</button>
