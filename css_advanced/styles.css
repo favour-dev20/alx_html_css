@@ -18,7 +18,7 @@ body {
    HEADER
 ========================= */
 header {
-  background-color: #222;
+  background-color: #222; /* dark header for logo visibility */
   color: #fff;
   position: sticky;
   top: 0;
@@ -32,7 +32,7 @@ header nav {
   padding: 1rem 2rem;
 }
 
-header nav img.logo {
+header nav img {
   width: 120px;
 }
 
@@ -49,14 +49,13 @@ header nav ul li a {
 }
 
 /* =========================
-   HERO
+   HERO / BANNER
 ========================= */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4rem 2rem;
-  background-color: #fffae6;
   gap: 2rem;
 }
 
@@ -65,3 +64,65 @@ header nav ul li a {
 }
 
 .hero-content h1 {
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.hero-content span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content button {
+  padding: 0.75rem 2rem;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #e65b50;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* =========================
+   INSTRUCTORS
+========================= */
+.instructors {
+  padding: 4rem 2rem;
+}
+
+.instructor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.instructor-cards div {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+.testimonial {
+  display: flex;
+  align
