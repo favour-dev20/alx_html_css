@@ -14,7 +14,152 @@ body {
   background-color: #f9f9f9;
 }
 
-/* HEADER, HERO, INSTRUCTORS, TESTIMONIAL, TUTORIALS remain unchanged */
+/* =========================
+   HEADER
+========================= */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header nav img {
+  width: 120px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* =========================
+   HERO / BANNER
+========================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #fffae6;
+  gap: 2rem;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.hero-content span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content button {
+  padding: 0.75rem 2rem;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #e65b50;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* =========================
+   INSTRUCTORS
+========================= */
+.instructors {
+  padding: 4rem 2rem;
+}
+
+.instructor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.instructor-cards div {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+/* =========================
+   TESTIMONIAL / QUOTES
+========================= */
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff3f0;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.testimonial-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.testimonial-content {
+  max-width: 600px;
+}
+
+.testimonial-content blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial-content h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-content p {
+  color: #777;
+}
 
 /* =========================
    VIDEOS LIST (TASK 4)
@@ -27,24 +172,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
 }
 
 .video-card {
   background-color: #fff;
   padding: 1rem;
   border-radius: 10px;
-  flex: 1 1 220px;
+  flex: 1 1 200px;
   text-align: center;
+  position: relative;
 }
 
 .video-thumb {
   position: relative;
-  display: inline-block;
 }
 
-.video-thumb img {
-  max-width: 100%;
+.video-thumb img:first-child {
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -55,12 +199,24 @@ body {
   width: 50px;
   height: 50px;
   transform: translate(-50%, -50%);
-  pointer-events: none;
 }
 
-/* Rating stars */
+.video-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.video-card p {
+  margin-bottom: 0.5rem;
+}
+
+.video-card .rating {
+  margin: 0.5rem 0;
+}
+
 .video-card .rating i {
   color: #ff6f61;
+  font-size: 1rem;
   margin: 0 2px;
 }
 
@@ -77,18 +233,9 @@ body {
     max-width: 80%;
   }
 
-  .instructor-cards, .tutorial-cards, .video-cards {
+  .instructor-cards,
+  .video-cards {
     flex-direction: column;
     align-items: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content span {
-    font-size: 1.5rem;
   }
 }
