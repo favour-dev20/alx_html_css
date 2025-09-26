@@ -1,16 +1,308 @@
-/* Reset & Body */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; line-height:1.6; }
+/* =========================
+   GENERAL STYLES
+========================= */
 
-/* Header */
-header { background:#fff; padding:1rem 2rem; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
-header nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-header nav img { width:80px; }
-header nav ul { display:flex; list-style:none; gap:2rem; }
-header nav ul li a { text-decoration:none; color:#333; font-weight:bold; transition:color 0.3s; }
-header nav ul li a:hover { color:#007bff; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-/* Hero */
-.hero { text-align:center; padding:4rem 2rem; }
-.hero h1 { font-size:3rem; margin-bottom:1rem; }
-.hero span { display:inline-block; font-size:1.2rem; margin:0 0.5rem
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fffae6;
+    gap: 1rem;
+}
+
+.hero-content span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.hero-content button {
+    padding: 0.75rem 2rem;
+    border: none;
+    background-color: #ff6f61;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #e65b50;
+}
+
+/* =========================
+   INSTRUCTORS SECTION
+========================= */
+
+.instructors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.instructors div {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.instructors img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* =========================
+   TESTIMONIAL SECTION
+========================= */
+
+.testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background-color: #e6f7ff;
+    gap: 2rem;
+}
+
+.testimonial img {
+    width: 250px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    max-width: 500px;
+}
+
+/* =========================
+   TUTORIALS SECTION
+========================= */
+
+.tutorials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tutorial-card {
+    background-color: #fff;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tutorial-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.tutorial-card .author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.tutorial-card .author img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.tutorial-card .rating {
+    color: #ffbf00;
+}
+
+/* =========================
+   MEMBERSHIP SECTION
+========================= */
+
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.membership-cards div {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.membership-cards img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.membership-cards button {
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.faq-column {
+    flex: 1 1 300px;
+}
+
+.faq-item {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer .footer-content img {
+    width: 100px;
+}
+
+footer .social-icons i {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+========================= */
+
+@media (max-width: 992px) {
+    .instructors, .tutorials, .membership-cards, .faq-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tutorial-card, .membership-cards div, .faq-column {
+        width: 90%;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content span {
+        font-size: 1.5rem;
+    }
+
+    .hero-content button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .testimonial {
+        flex-direction: column;
+    }
+}
