@@ -1,4 +1,4 @@
-/* GENERAL STYLES */
+/* GENERAL */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -88,14 +88,15 @@ header nav ul li a {
 }
 
 /* INSTRUCTORS */
-.instructors {
+.instructors, .tutorials, .membership, .faq {
   padding: 4rem 2rem;
-  text-align: center;
 }
 
 .instructors h2 {
-  font-size: 2rem;
+  text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
 }
 
 .instructor-cards {
@@ -113,16 +114,15 @@ header nav ul li a {
   text-align: center;
 }
 
-/* TESTIMONIAL / QUOTES */
+/* TESTIMONIAL */
 .testimonial {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
   padding: 4rem 2rem;
   background-color: #fff3f0;
   border-radius: 10px;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 
 .testimonial-image img {
@@ -137,15 +137,12 @@ header nav ul li a {
   margin-bottom: 1rem;
 }
 
-/* VIDEOS LIST / MOST POPULAR TUTORIALS */
-.tutorials {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
+/* VIDEOS LIST */
 .tutorials h2 {
-  font-size: 2rem;
+  text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
 }
 
 .tutorial-cards {
@@ -191,9 +188,9 @@ header nav ul li a {
 }
 
 .video-card p {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
+  color: #555;
 }
 
 .video-card .author {
@@ -205,27 +202,21 @@ header nav ul li a {
 
 .video-card .author img {
   width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
 .video-card .rating i {
-  color: gold;
+  color: #ff6f61;
+  margin-right: 2px;
 }
 
-.video-card p:last-child {
-  font-size: 0.8rem;
-  color: #999;
-}
-
-/* MEMBERSHIP */
-.membership {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
+/* MEMBERSHIP SECTION */
 .membership h2 {
-  font-size: 2rem;
+  text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
 }
 
 .membership-cards {
@@ -237,77 +228,78 @@ header nav ul li a {
 
 .membership-card {
   background-color: #fff;
+  border-radius: 15px;
   padding: 2rem 1rem;
-  border-radius: 10px;
-  flex: 1 1 220px;
+  flex: 1 1 250px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .membership-card img {
-  width: 60px;
+  background-color: #ff6f61; /* ensures logo visible on white background */
+  border-radius: 50%;
+  padding: 15px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 
+.membership-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.membership-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
 .membership-card button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
   background-color: #ff6f61;
   color: #fff;
+  border: none;
+  border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
 }
 
 /* FAQ SECTION */
-.faq {
-  padding: 4rem 2rem;
-  background-color: #f5f5f5;
-}
-
 .faq h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #222;
 }
 
 .faq-item {
   background-color: #fff;
-  padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-}
-
-.faq-item h3 {
+  padding: 1rem 1.5rem;
   cursor: pointer;
 }
 
+.faq-item h3 {
+  font-size: 1.2rem;
+  color: #222;
+}
+
 .faq-item p {
-  display: none;
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #555;
+  display: none; /* hidden by default */
 }
 
 /* FOOTER */
 footer {
-  padding: 2rem;
-  text-align: center;
   background-color: #222;
   color: #fff;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-  }
-  .testimonial {
-    flex-direction: column;
-  }
-  .instructor-cards,
-  .tutorial-cards,
-  .membership-cards {
-    flex-direction: column;
-  }
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
 }
