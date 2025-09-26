@@ -178,39 +178,4 @@ header nav ul li a {
 ========================= */
 @media (max-width: 992px) {
   .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image img {
-    max-width: 80%;
-  }
-
-  .instructor-cards, .tutorial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .testimonial {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .testimonial-image img {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content span {
-    font-size: 1.5rem;
-  }
-
-  .testimonial-content blockquote {
-    font-size: 1.2rem;
-  }
-}
+    flex-direction: column
