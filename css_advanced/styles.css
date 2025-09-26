@@ -1,140 +1,148 @@
-/* ========== RESET / BASE ========== */
+/* =========================
+   GENERAL STYLES
+========================= */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #222;
-  background: #fff;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-/* HEADER */
-.header {
+/* =========================
+   HEADER
+========================= */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #fff;
 }
 
-.header .logo img {
-  height: 40px;
+header nav img {
+  width: 120px;
 }
 
-.nav ul {
+header nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.nav a {
+header nav ul li a {
   text-decoration: none;
-  color: #222;
-  font-weight: bold;
+  color: #333;
+  font-weight: 600;
 }
 
-/* HERO */
+/* =========================
+   HERO / BANNER
+========================= */
 .hero {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 4rem 2rem;
-  background: #ff6f61;
-  color: #fff;
+  background-color: #fffae6;
+  gap: 2rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #222;
   margin-bottom: 1rem;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+.hero-content span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
 }
 
-.cta-button {
-  background: #222;
+.hero-content button {
+  padding: 0.75rem 2rem;
+  background-color: #ff6f61;
   color: #fff;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 5px;
   font-weight: bold;
-  transition: background 0.2s ease;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.cta-button:hover {
-  background: #444;
+.hero-content button:hover {
+  background-color: #e65b50;
 }
 
-/* PROS */
-.pros {
-  padding: 3rem 2rem;
-  text-align: center;
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
 }
 
-.pros-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+/* =========================
+   INSTRUCTORS & TUTORIALS
+========================= */
+.instructors, .tutorials {
+  padding: 4rem 2rem;
 }
 
-.pro-card img {
-  width: 100%;
-  border-radius: 12px;
+.instructor-cards, .tutorial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.pro-card h3 {
-  margin-top: 0.75rem;
-  font-size: 1rem;
-}
-
-.pro-card p {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* TUTORIALS */
-.tutorials {
-  padding: 3rem 2rem;
-  background: #f9f9f9;
-}
-
-.tutorials h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.tutorials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.tutorial-card {
-  background: #fff;
-  border-radius: 12px;
+.instructor-cards div, .tutorial-cards div {
+  background-color: #fff;
   padding: 1rem;
+  border-radius: 10px;
+  flex: 1 1 200px;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
 }
 
-.tutorial-card:hover {
-  transform: translateY(-4px);
+.tutorial-cards .author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
 }
 
-.tutorial-image {
+.tutorial-cards .rating i {
+  color: #ff6f61;
+}
+
+/* =========================
+   VIDEO LIST (with play icon)
+========================= */
+.video-thumbnail {
   position: relative;
+  display: inline-block;
 }
 
-.tutorial-image img {
+.video-thumbnail img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .play-icon {
@@ -142,114 +150,131 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.5);
   border-radius: 50%;
-  padding: 0.4rem 0.6rem;
-  font-size: 1rem;
+  padding: 10px;
 }
 
-.rating {
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  color: #ff6f61;
+/* =========================
+   TESTIMONIAL / QUOTES
+========================= */
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff3f0;
+  border-radius: 10px;
+  margin: 2rem 0;
 }
 
-/* ========== MEMBERSHIP (Task 5) ========== */
+.testimonial-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.testimonial-content {
+  max-width: 600px;
+}
+
+.testimonial-content blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial-content h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-content p {
+  color: #777;
+}
+
+/* =========================
+   MEMBERSHIP SECTION
+========================= */
 .membership {
   padding: 4rem 2rem;
-  background-color: #fffaf6;
+  background-color: #f0f8ff;
+  text-align: center;
 }
 
 .membership h2 {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: #222;
 }
 
-.membership-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.membership-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.04);
-  text-align: center;
+.membership .membership-cards {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.membership-card img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.membership-card h3 {
-  font-size: 1.05rem;
-  color: #222;
-}
-
-.membership-card p {
-  color: #666;
-  font-size: 0.95rem;
-  margin-top: auto;
-}
-
-.membership-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
-}
-
-.membership-cta {
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
-  margin-top: 1.75rem;
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background: #222;
+.membership .membership-cards div {
+  flex: 1 1 200px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+
+.membership .membership-cards i {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.membership button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #ff6f61;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* ========== RESPONSIVE ========== */
+.membership button:hover {
+  background-color: #e65b50;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 992px) {
-  .pros-grid,
-  .tutorials-grid,
-  .membership-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+
+  .instructor-cards, .tutorial-cards, .membership .membership-cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media (max-width: 576px) {
-  .pros-grid,
-  .tutorials-grid,
-  .membership-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
+  .hero-content h1 {
     font-size: 2rem;
   }
 
-  .membership h2 {
-    font-size: 1.5rem;
-  }
-
-  .membership-card img {
-    width: 56px;
-    height: 56px;
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
   }
 }
