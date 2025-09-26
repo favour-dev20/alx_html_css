@@ -133,6 +133,47 @@ header nav ul li a {
 }
 
 /* =========================
+   TESTIMONIAL / QUOTES (TASK 3)
+========================= */
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff3f0;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.testimonial-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.testimonial-content {
+  max-width: 600px;
+}
+
+.testimonial-content blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial-content h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-content p {
+  color: #777;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 992px) {
@@ -149,6 +190,15 @@ header nav ul li a {
     flex-direction: column;
     align-items: center;
   }
+
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-image img {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -156,4 +206,11 @@ header nav ul li a {
     font-size: 2rem;
   }
 
-  .hero
+  .hero-content span {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 1.2rem;
+  }
+}
