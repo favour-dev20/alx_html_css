@@ -81,6 +81,7 @@
   <section class="tutorials">
     <h2>Most popular tutorials</h2>
     <div class="tutorial-cards">
+
       <div class="video-card">
         <div class="video-thumb">
           <img src="./images/6.png" alt="Diagonal Smile">
@@ -110,8 +111,8 @@
         <h3>Happy Smile</h3>
         <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
         <div class="author">
-          <img src="./images/2.png" alt="Phillip Massey">
-          <h4>Phillip Massey</h4>
+          <img src="./images/3.png" alt="Nannie Lawrence">
+          <h4>Nannie Lawrence</h4>
         </div>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
@@ -120,7 +121,7 @@
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-        <p>8 min</p>
+        <p>12 min</p>
       </div>
 
       <div class="video-card">
@@ -131,8 +132,8 @@
         <h3>Natural Smile</h3>
         <p>Lorem ipsum dolor sit amet, consect adipiscing elit.</p>
         <div class="author">
-          <img src="./images/2.png" alt="Phillip Massey">
-          <h4>Phillip Massey</h4>
+          <img src="./images/4.png" alt="Bruce Walters">
+          <h4>Bruce Walters</h4>
         </div>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
@@ -141,8 +142,9 @@
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-        <p>8 min</p>
+        <p>15 min</p>
       </div>
+
     </div>
   </section>
 
@@ -170,23 +172,29 @@
       </div>
     </div>
   </section>
-
+  
   <!-- FAQ SECTION -->
   <section class="faq">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq-cards">
-      <div class="faq-card">
-        <h3>How do I register?</h3>
-        <p>You can register for free using the "REGISTER FOR FREE" button at the top.</p>
-      </div>
-      <div class="faq-card">
-        <h3>What is included in the membership?</h3>
-        <p>Membership gives access to all tutorials and premium content.</p>
-      </div>
-      <div class="faq-card">
-        <h3>Can I upgrade my plan later?</h3>
-        <p>Yes, you can upgrade anytime from your account settings.</p>
-      </div>
+
+    <div class="faq-item">
+      <h3>What is Smile School?</h3>
+      <p>Smile School is an online platform to learn professional smiling techniques from expert instructors.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I register?</h3>
+      <p>Click the "REGISTER FOR FREE" button at the top of the page and fill out the registration form.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need prior experience?</h3>
+      <p>No prior experience is needed. All tutorials are beginner-friendly.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What payment methods are accepted?</h3>
+      <p>We accept credit cards, debit cards, and PayPal.</p>
     </div>
   </section>
 
@@ -194,6 +202,17 @@
   <footer>
     <p>&copy; 2025 Smile School. All rights reserved.</p>
   </footer>
+
+  <script>
+    // FAQ toggle
+    const faqItems = document.querySelectorAll('.faq-item h3');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const p = item.nextElementSibling;
+        p.style.display = p.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 
 </body>
 </html>
