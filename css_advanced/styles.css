@@ -1,4 +1,4 @@
-/* GENERAL */
+/* GENERAL STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -88,15 +88,14 @@ header nav ul li a {
 }
 
 /* INSTRUCTORS */
-.instructors, .tutorials, .membership, .faq {
+.instructors {
   padding: 4rem 2rem;
+  text-align: center;
 }
 
 .instructors h2 {
-  text-align: center;
-  margin-bottom: 2rem;
   font-size: 2rem;
-  color: #222;
+  margin-bottom: 2rem;
 }
 
 .instructor-cards {
@@ -114,15 +113,16 @@ header nav ul li a {
   text-align: center;
 }
 
-/* TESTIMONIAL */
+/* TESTIMONIAL / QUOTES */
 .testimonial {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
   padding: 4rem 2rem;
   background-color: #fff3f0;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .testimonial-image img {
@@ -137,12 +137,15 @@ header nav ul li a {
   margin-bottom: 1rem;
 }
 
-/* VIDEOS LIST */
-.tutorials h2 {
+/* VIDEOS LIST / MOST POPULAR TUTORIALS */
+.tutorials {
+  padding: 4rem 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+}
+
+.tutorials h2 {
   font-size: 2rem;
-  color: #222;
+  margin-bottom: 2rem;
 }
 
 .tutorial-cards {
@@ -188,9 +191,9 @@ header nav ul li a {
 }
 
 .video-card p {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
   color: #555;
+  margin-bottom: 0.5rem;
 }
 
 .video-card .author {
@@ -202,13 +205,16 @@ header nav ul li a {
 
 .video-card .author img {
   width: 30px;
-  height: 30px;
   border-radius: 50%;
 }
 
 .video-card .rating i {
-  color: #ff6f61;
-  margin-right: 2px;
+  color: gold;
+}
+
+.video-card p:last-child {
+  font-size: 0.8rem;
+  color: #999;
 }
 
 /* MEMBERSHIP SECTION */
@@ -268,38 +274,54 @@ header nav ul li a {
 }
 
 /* FAQ SECTION */
+.faq {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+}
+
 .faq h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #222;
 }
 
 .faq-item {
   background-color: #fff;
+  padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
 }
 
 .faq-item h3 {
-  font-size: 1.2rem;
-  color: #222;
+  cursor: pointer;
 }
 
 .faq-item p {
+  display: none;
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
-  display: none; /* hidden by default */
 }
 
 /* FOOTER */
 footer {
+  padding: 2rem;
+  text-align: center;
   background-color: #222;
   color: #fff;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .testimonial {
+    flex-direction: column;
+  }
+  .instructor-cards,
+  .tutorial-cards,
+  .membership-cards {
+    flex-direction: column;
+  }
 }
