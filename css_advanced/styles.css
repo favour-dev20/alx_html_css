@@ -32,8 +32,10 @@ header nav {
   padding: 1rem 2rem;
 }
 
-header nav img {
+header nav .site-logo {
   width: 120px;
+  height: auto;
+  display: block;
 }
 
 header nav ul {
@@ -132,29 +134,26 @@ header nav ul li a {
   color: #ff6f61;
 }
 
-/* =========================
-   VIDEO LIST (with play icon)
-========================= */
-.video-thumbnail {
+/* Thumbnails with play icon */
+.thumbnail {
   position: relative;
-  display: inline-block;
 }
 
-.video-thumbnail img {
+.thumbnail img {
   width: 100%;
   border-radius: 10px;
 }
 
-.play-icon {
+.thumbnail .play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: white;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   border-radius: 50%;
-  padding: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
 }
 
 /* =========================
@@ -199,12 +198,12 @@ header nav ul li a {
 }
 
 /* =========================
-   MEMBERSHIP SECTION
+   MEMBERSHIP (TASK 5)
 ========================= */
 .membership {
-  padding: 4rem 2rem;
-  background-color: #f0f8ff;
   text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
 }
 
 .membership h2 {
@@ -213,29 +212,42 @@ header nav ul li a {
   color: #222;
 }
 
-.membership .membership-cards {
+.membership-cards {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.membership-cards .card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  flex: 1 1 200px;
+  max-width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.membership .membership-cards div {
-  flex: 1 1 200px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem 1rem;
-}
-
-.membership .membership-cards i {
-  font-size: 2rem;
-  color: #ff6f61;
+.membership-cards .card img {
+  width: 60px;
+  height: auto;
   margin-bottom: 1rem;
 }
 
+.membership-cards .card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.membership-cards .card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
 .membership button {
-  margin-top: 2rem;
   padding: 0.75rem 2rem;
   background-color: #ff6f61;
   color: #fff;
@@ -243,6 +255,7 @@ header nav ul li a {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .membership button:hover {
@@ -262,19 +275,15 @@ header nav ul li a {
     max-width: 80%;
   }
 
-  .instructor-cards, .tutorial-cards, .membership .membership-cards {
+  .instructor-cards, .tutorial-cards {
     flex-direction: column;
     align-items: center;
   }
 }
 
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .testimonial {
+@media (max-width: 768px) {
+  .membership-cards {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 }
