@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+/* GENERAL STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,11 +12,9 @@ body {
   background-color: #f9f9f9;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 header {
-  background-color: #1a1a1a; /* Dark background for logo visibility */
+  background-color: #222;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -31,7 +27,7 @@ header nav {
   padding: 1rem 2rem;
 }
 
-header nav img {
+header nav img.logo {
   width: 120px;
 }
 
@@ -47,9 +43,7 @@ header nav ul li a {
   font-weight: 600;
 }
 
-/* =========================
-   HERO / BANNER
-========================= */
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -85,11 +79,6 @@ header nav ul li a {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.hero-content button:hover {
-  background-color: #e65b50;
 }
 
 .hero-image img {
@@ -98,10 +87,8 @@ header nav ul li a {
   border-radius: 10px;
 }
 
-/* =========================
-   INSTRUCTORS
-========================= */
-.instructors {
+/* INSTRUCTORS */
+.instructors, .tutorials {
   padding: 4rem 2rem;
 }
 
@@ -120,9 +107,7 @@ header nav ul li a {
   text-align: center;
 }
 
-/* =========================
-   TESTIMONIAL / QUOTES
-========================= */
+/* TESTIMONIAL */
 .testimonial {
   display: flex;
   align-items: center;
@@ -135,12 +120,7 @@ header nav ul li a {
 
 .testimonial-image img {
   width: 200px;
-  height: auto;
   border-radius: 10px;
-}
-
-.testimonial-content {
-  max-width: 600px;
 }
 
 .testimonial-content blockquote {
@@ -148,26 +128,9 @@ header nav ul li a {
   font-style: italic;
   color: #555;
   margin-bottom: 1rem;
-  line-height: 1.5;
 }
 
-.testimonial-content h3 {
-  font-size: 1.25rem;
-  color: #222;
-  margin-bottom: 0.25rem;
-}
-
-.testimonial-content p {
-  color: #777;
-}
-
-/* =========================
-   VIDEOS LIST / POPULAR TUTORIALS
-========================= */
-.tutorials {
-  padding: 4rem 2rem;
-}
-
+/* VIDEOS LIST */
 .tutorial-cards {
   display: flex;
   flex-wrap: wrap;
@@ -175,21 +138,23 @@ header nav ul li a {
   justify-content: center;
 }
 
-.tutorial-cards div {
+.video-card {
   background-color: #fff;
-  padding: 1rem;
   border-radius: 10px;
-  flex: 1 1 250px;
+  padding: 1rem;
+  flex: 1 1 220px;
   text-align: center;
-  position: relative;
 }
 
 .video-thumb {
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .video-thumb img {
   width: 100%;
+  display: block;
   border-radius: 10px;
 }
 
@@ -198,89 +163,15 @@ header nav ul li a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: #fff;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  padding: 0.5rem 0.6rem;
-}
-
-.tutorial-cards .author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
-}
-
-.tutorial-cards .rating i {
   color: #ff6f61;
+  font-size: 2rem;
+  opacity: 0.9;
 }
 
-/* =========================
-   MEMBERSHIP
-========================= */
-.membership {
-  padding: 4rem 2rem;
-  background-color: #fff3f0;
+.video-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
-.membership-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.membership-cards div {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  flex: 1 1 200px;
-  text-align: center;
-}
-
-.membership-cards img {
-  width: 80px;
-  margin-bottom: 1rem;
-}
-
-.membership-cards button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  background-color: #ff6f61;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.membership-cards button:hover {
-  background-color: #e65b50;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 992px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image img {
-    max-width: 80%;
-  }
-
-  .instructor-cards, .tutorial-cards, .membership-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-}
+.video-card p {
+  font-size
