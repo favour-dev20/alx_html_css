@@ -133,7 +133,7 @@ header nav ul li a {
 }
 
 /* =========================
-   TESTIMONIAL / QUOTES (TASK 3)
+   TESTIMONIAL / QUOTES
 ========================= */
 .testimonial {
   display: flex;
@@ -174,51 +174,41 @@ header nav ul li a {
 }
 
 /* =========================
-   VIDEOS LIST / TASK 4
+   VIDEOS LIST (TASK 4)
 ========================= */
 .videos {
   padding: 4rem 2rem;
-}
-
-.videos h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #222;
 }
 
 .video-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
 }
 
-.video-cards div {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
+.video-card {
+  position: relative;
   flex: 1 1 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
+  padding: 1rem;
 }
 
-.video-cards img {
+.video-card img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 1rem;
 }
 
-.video-cards h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #222;
-}
-
-.video-cards p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.video-card .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
 }
 
 /* =========================
@@ -238,27 +228,10 @@ header nav ul li a {
     flex-direction: column;
     align-items: center;
   }
-
-  .testimonial {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 @media (max-width: 576px) {
   .hero-content h1 {
     font-size: 2rem;
-  }
-
-  .hero-content span {
-    font-size: 1.5rem;
-  }
-
-  .testimonial-content blockquote {
-    font-size: 1.2rem;
-  }
-
-  .video-cards div {
-    flex: 1 1 100%;
   }
 }
